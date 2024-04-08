@@ -1,0 +1,206 @@
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>콜렉터아이디</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Login -->
+  <section class="ID_log">
+    <div class="id_Design">
+    </div>
+    <div class="id_menu">
+      <div class="title">
+        <p>로고 및 이름</p>
+      </div>
+      <div class="log_id">
+        <input type="text" placeholder="로그인" id="login_id_t">
+      </div>
+      <div class="log_pw">
+        <input type="text" placeholder="비밀번호" id="login_pw_t">
+      </div>
+      <div class="log_test">
+        <button type="button" id="login">로그인</button>
+      </div>
+      <div class="log_find">
+        <button id="F_new_Id">회원가입</button>
+        <button id="F_fw">비밀번호 찼기</button>
+      </div>
+    </div>
+    <div class="id_new">
+      <div id="" class="log_new">
+        <input type="text" placeholder="로그인" id="login_id"><br>
+        <input type="text" placeholder="비밀번호" id="login_pw"><br>
+        <button type="button" id="login_new" class="">가입</button>
+        <button type="button" id="login_f_pw" class="">찼기</button>
+        <button class="id_new_C">창닫기</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- header -->
+  <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+        <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+    </div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="#" class="nav-link px-2 link-secondary">Collector</a></li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      <button type="button" class="btn btn-outline-primary me-2" id="logout">개인설정</button>
+    </div>
+  </header>
+
+  <div class="title">
+    <h1>Collector</h1>
+  </div>
+
+  <div class="main">
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+      <!-- left section -->
+      <div id="box1" class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">
+            <form class="w-100 me-3" role="search">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+          </h2>
+          <p class="lead" id="hobbyTitle">
+            
+          </p>
+          <ul>
+            <li id="Youtube">Youtube <button class="openclose" id="youtubeOpencloseBtn">🔻</button>
+              <div id="youtubeView">
+                
+              </div>
+            </li>
+            <li id="namuwitki">나무위키 <button class="openclose" id="namuOpencloseBtn">🔻</button>
+              <div id="namuwikiView">
+
+              </div>
+            </li>
+            <li id="Sagin">사진 <button class="openclose" id="photoOpencloseBtn">🔻</button>
+              <div id="photoView">
+
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- right section -->
+      <div id="box2" class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <!-- 새로운 취미입력 btn-->
+          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hobbyModal">
+            새 취미 입력
+          </button>
+          <!-- 새로운 취미입력 Modal창 -->
+          <div class="modal fade" id="hobbyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="inputHobby" placeholder="취미명">
+                    <label for="floatingInput">새로운 취미명 입력</label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button> -->
+                  <button id="saveHobby" type="button" class="btn btn-danger">저장하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 링크추가 btn -->
+          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#contentModal">
+            링크 추가
+          </button>
+          <!-- 링크추가 Modal창 -->
+          <div class="modal fade" id="contentModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+
+                <div class="modal-body">
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="selectHobby" aria-label="Floating label select example">
+                      <option selected>-- 선택 --</option>
+                      <!-- <option value="photo">사진</option>
+                                                <option value="youtube">유튜브 영상</option>
+                                                <option value="namu">나무위키</option> -->
+                    </select>
+                    <label for="floatingSelect">취미</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="contentType" aria-label="Floating label select example">
+                      <option selected>-- 선택 --</option>
+                      <option value="photo">사진</option>
+                      <option value="youtube">유튜브 영상</option>
+                      <option value="namu">나무위키</option>
+                    </select>
+                    <label for="floatingSelect">기록타입</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="address" placeholder="링크">
+                    <label for="floatingInput">링크 주소 입력</label>
+                  </div>
+                </div>
+
+
+                <div class="modal-footer">
+                  <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button> -->
+                  <button id="saveLink" type="button" class="btn btn-danger">저장하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p><br />취미 목록<br /></p>
+
+          <!-- category -->
+          <div id="category" class="table">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="./script.js"></script>
+<script type="module" src="./module.js"></script>
+
+</html>
