@@ -1,0 +1,332 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Collector</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Login -->
+  <section class="ID_log">
+    <div class="id_Design">
+    </div>
+    <div class="id_menu">
+      <div class="ID_title">
+        <p style="font-size: 8rem; font-weight:bolder;" class="lobster-regular">Collector</p>
+        <p style="font-size: 2rem;font-weight:bold;">Login</p>
+      </div>
+      <div class="log_id">
+        <p style="font-weight:bolder;color :white;">ID</p>
+        <input type="text" placeholder="아이디" id="login_id_t">
+      </div>
+      <div class="log_pw">
+        <p style="font-weight:bolder; color :white;">PW</p>
+        <input type="text" placeholder="비밀번호" id="login_pw_t">
+      </div>
+      <div class="log_test">
+        <button id="login" type="button" class="btn btn-danger">로그인</button>
+      </div>
+      <div class="log_find">
+        <button id="F_new_Id">회원가입 /</button>
+        <button id="F_fw">비밀번호 찾기</button>
+      </div>
+    </div>
+    <div class="id_new">
+      <div id="" class="log_new">
+        <p style="font-size: 2rem;" id="login_new_L">회원가입</p>
+        <p style="font-size: 2rem;" id="login_f_pw_L">비밀번호 찾기</p>
+        <input type="text" placeholder="로그인" id="login_id"><br>
+        <input type="text" placeholder="비밀번호" id="login_pw"><br>
+        <button type="button" id="login_new" class="">가입</button>
+        <button type="button" id="login_f_pw" class="">찾기</button>
+        <button class="id_new_C">창닫기</button>
+      </div>
+    </div>
+  </section>
+  <!-- header -->
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class="fs-4 lobster-regular" style="font-size: 5rem; color:white">Collector</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li id="logout">로그아웃</a></li>
+    </ul>
+  </header>
+
+  <!-- carousel -->
+  <div class="title">
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="350px" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+          </svg>
+          <div class="container">
+            <div id="carousel1" class="carousel-caption text-start">
+
+              <p><a class="btn btn-lg btn-primary" href="#">See more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="350px" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+          </svg>
+          <div class="container">
+            <div id="carousel2" class="carousel-caption">
+
+              <p><a class="btn btn-lg btn-primary" href="#">See more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="350px" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)" />
+          </svg>
+          <div class="container">
+            <div id="carousel3" class="carousel-caption text-end">
+
+              <p><a class="btn btn-lg btn-primary" href="#">See more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="main">
+    <!-- left section -->
+    <div class="box1">
+      <div class="main">
+        <!-- left section -->
+        <div id="box1">
+          <div class="">
+            <h1 class="hobbyTitle"></h1>
+            <footer class="pt-5 my-5 text-body-secondary border-top"></footer>
+            <ul id="contents_view">
+              <li id="Youtube"> <button class="openclose" id="youtubeOpencloseBtn"><p>Youtube</p>
+              <p>🔻</p> </button>
+                <div id="youtubeView">
+                </div>
+                <footer class="pt-5 my-5 text-body-secondary border-top"></footer>
+              </li>
+              <li id="namuwitki"> <button class="openclose" id="namuOpencloseBtn"><p>나무위키</p>
+              <p>🔻</p> </button>
+                <div id="namuwikiView">
+                </div>
+                <footer class="pt-5 my-5 text-body-secondary border-top"></footer>
+              </li>
+              <li id="Sagin"> <button class="openclose" id="photoOpencloseBtn"><p>사진</p>
+              <p>🔻</p></button>
+                <div id="photoView">
+                </div>
+                <footer class="pt-5 my-5 text-body-secondary border-top"></footer>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- right section -->
+        <div id="box2">
+          <div class="my-3 p-3 T_menu">
+            <!-- 검색창 -->
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="취미명을 입력해주세요.">
+              <button type="submit" class="btn btn-secondary">검색</button>
+            </div>
+            <!-- 새로운 취미입력 btn-->
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#hobbyModal">
+              새 취미 입력
+            </button>
+            <!-- 새로운 취미입력 Modal창 -->
+            <div class="modal fade" id="hobbyModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="inputHobby" placeholder="취미명">
+                      <label for="floatingInput">새로운 취미명 입력</label>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Save changes</button> -->
+                    <button id="saveHobby" type="button" class="btn btn-danger">저장하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 링크추가 btn -->
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#contentModal">
+              링크 추가
+            </button>
+            <!-- 링크추가 Modal창 -->
+            <div class="modal fade" id="contentModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+
+                  <div class="modal-body">
+                    <div class="form-floating mb-3">
+                      <select class="form-select" id="selectHobby" aria-label="Floating label select example">
+                        <option selected>-- 선택 --</option>
+                        <!-- <option value="photo">사진</option>
+                                          <option value="youtube">유튜브 영상</option>
+                                          <option value="namu">나무위키</option> -->
+                      </select>
+                      <label for="floatingSelect">취미</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <select class="form-select" id="contentType" aria-label="Floating label select example">
+                        <option selected>-- 선택 --</option>
+                        <option value="photo">사진</option>
+                        <option value="youtube">유튜브 영상</option>
+                        <option value="namu">나무위키</option>
+                      </select>
+                      <label for="floatingSelect">기록타입</label>
+                    </div>
+
+
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="linkName" placeholder="링크이름">
+                      <label for="floatingInput">저장할 이름</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="address" placeholder="링크">
+                      <label for="floatingInput">링크 주소 입력</label>
+                    </div>
+                  </div>
+
+
+                  <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Save changes</button> -->
+                    <button id="saveLink" type="button" class="btn btn-danger">저장하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p><br />취미 목록<br /></p>
+
+            <!-- category -->
+            <div id="category" class="table">
+            </div>
+
+            <!-- 링크삭제 btn -->
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#deleteModal">
+              삭제
+            </button>
+
+            <!-- 링크삭제 Modal창 -->
+            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+
+                  <div class="modal-body">
+                    <div class="form-floating mb-3">
+                      <select class="form-select" id="deleteHobby" aria-label="Floating label select example">
+                        <option selected>-- 선택 --</option>
+                        <!-- <option value="photo">사진</option>
+                                                    <option value="youtube">유튜브 영상</option>
+                                                    <option value="namu">나무위키</option> -->
+                      </select>
+                      <label for="floatingSelect">취미</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <select class="form-select" id="contentType" aria-label="Floating label select example">
+                        <option selected>-- 선택 --</option>
+                        <option value="photo">사진</option>
+                        <option value="youtube">유튜브 영상</option>
+                        <option value="namu">나무위키</option>
+                      </select>
+                      <label for="floatingSelect">기록타입</label>
+                    </div>
+
+
+                    <div class="form-floating mb-3">
+                      <select class="form-select" id="deleteAddress" aria-label="Floating label select example">
+                        <option selected>-- 선택 --</option>
+
+                      </select>
+                      <label for="floatingSelect">삭제할 항목</label>
+                    </div>
+
+                  </div>
+
+                  <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                              <button type="button" class="btn btn-primary">Save changes</button> -->
+                    <button id="deleteLink" type="button" class="btn btn-danger">삭제하기</button>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+<script type="module" src="./module.js"></script>
+
+</html>

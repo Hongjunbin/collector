@@ -1,0 +1,506 @@
+/*폰트*/
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@100..900&display=swap');
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/*노멀 라이즈 */
+body,ul,li{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*커스텀*/
+/*색배정*/
+
+:root{
+  --web_b_color :#FFF6E9;
+  --web_bd1_color :#40A2E3;
+  --web_bd2_color :#BBE2EC;
+  --web_bd3_color :#0D9276;
+}
+
+body{
+  background-color:var(--web_bd1_color) !important;
+   -ms-overflow-style: none;
+ }
+ 
+::-webkit-scrollbar {
+  display: none;
+}
+
+.inline{
+  display: inline-block;
+}
+/* 로그인 */
+.ID_log > *{
+  transition: all .8s;
+  position: fixed;
+  z-index: 1000;
+}
+.id_Design{
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color:var(--web_b_color);
+}
+.id_menu{
+  top: 0;
+  padding: 15px;
+  left : 50%;
+  right: auto;
+  height: 100%;
+  width: 30%;
+  transform: translateX(-50%);
+  background-color:var(--web_bd1_color);
+}
+.id_menu.show{
+  left : 30%;
+}
+.id_menu > *{
+  top: 10%;
+  position: relative;
+  height: 10%;
+  width: 100%;
+ /* border: 3px solid blue ;*/
+}
+.id_new{
+  visibility: hidden;
+  left: 50%;
+  right: 10%;
+  top: 10%;
+  height: 0%;
+  width: 40%;
+ /* border: 3px solid blue ;*/
+}
+.id_new.show{
+  visibility: visible;
+  height: 80%;
+}
+#login_pw_t , #login_id_t{
+  border:none;
+  width: 60%;
+  background-color:var(--web_b_color);
+}
+#F_new_Id,#F_fw{
+  color:white;
+}
+
+.log_new{
+  border-radius: 20% 20% 0% 0%; ;
+  padding: 200px;
+  padding-top:250px ;
+  background-color: #BCBCBC;
+  box-shadow: 3px 6px 7px rgba(0, 0, 0, 0.384), -3px 6px 7px rgba(0, 0, 0, 0.384),3px 0px 7px rgba(0, 0, 0, 0.384), -3px 0px 7px rgba(0, 0, 0, 0.384);
+}
+
+.log_new > *{
+  margin: 10px;
+}
+/*로그인 완료*/
+
+/*로그인중*/
+.id_menu{
+  min-width: 500px;
+  box-shadow: 0px 10px 8px black;
+}
+.id_menu.login{
+  visibility: hidden;
+  height: 0%;
+}.id_menu.login > *{
+  visibility: hidden;
+  transition: all .1s;
+}
+.id_Design.login{
+  visibility: hidden;
+  width: 0%;
+  opacity: 0;
+}
+/*로그인중 완료*/
+
+
+
+/*회원가입*/
+.ID_title{
+  color: white;
+  height: 320px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+.ID_title > p:nth-child(1){
+  position: absolute;
+  top: -15px;
+}
+.ID_title > p:nth-child(2){
+  height: 250px;
+  position: absolute;
+  top: 270px;
+  right: 400px;
+}
+.id_new > *{
+  position: absolute;
+  top : 10%;
+  left: auto;
+  right: auto;
+}
+.id_new div{
+  visibility: hidden;
+}
+.id_new.show  div{
+  visibility: visible;
+}
+.hidden{
+
+  display: none;
+  visibility: hidden;
+}
+.log_test{
+  text-align: right;
+  justify-content: bottom;
+}
+.log_test > button{
+  margin-top: 20px;
+  width: 45%;
+}
+.log_find{
+  text-align: right;
+}
+.log_find > button{
+  border:none;
+  background:none;
+}
+/*회원가입 완료*/
+
+/* 링크 박스 */
+.img_box{
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  box-shadow:0 1px 2px rgba(0,0,0,0.3),
+    0 1px 3px rgba(0,0,0,0.15);
+    transition: box-shadow .3s;
+    margin: 20px;
+}.img_box:hover{
+  box-shadow:0 10px 10px rgba(0,0,0,0.3),
+    0 14px 28px rgba(0,0,0,0.3);
+}.img_box > img{
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.img_box:hover > img{
+  object-fit:contain;
+  margin-top: -20%;
+  margin-left: -10%;
+  width: 130%;
+  height: 130%;
+
+  box-shadow:0 10px 10px rgba(0,0,0,0.3),
+  0 14px 28px rgba(0,0,0,0.3);
+  z-index: 20;
+}
+
+.namu_box{
+  display: inline-flex;
+}
+.namu_box *{
+  border: 3px solid white;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
+  background-color: var(--web_bd3_color);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow:0 1px 2px rgba(0,0,0,0.3),
+  0 1px 3px rgba(0,0,0,0.15);
+  transition: box-shadow .3s,background-color .3s , color .2s; ;
+  margin: 5px;
+}.namu_box:hover *{
+  color: black;
+  border: 2px solid black;
+  background-color: white;
+  box-shadow:0 10px 10px rgba(0,0,0,0.3),
+  0 14px 28px rgba(0,0,0,0.3);
+}
+
+
+/*링크박스 끝*/
+
+
+
+
+
+
+
+/* 각 항목 디자인 만들기*/
+.hobbyTitle{
+  opacity: .7;
+  transform: translate( 3%,20%);
+  padding: 10px;
+  text-align: left;
+  font-size: 3.6rem;
+  font-weight: bolder ;
+}
+#contents_view{
+  padding: 0;
+}#contents_view > li > div{
+  margin-left: 40px;
+}#contents_view > li > button{
+  border: 2px solid black;
+}
+
+#contents_view button{
+  display:block;
+  width: 100%;
+  padding: 0;
+  align-items: center;
+}
+#contents_view button > p{
+  display:inline-block;
+  margin: 0;
+  color: white;
+  font-weight: bolder;
+}
+
+#Youtube{
+
+}
+#youtubeOpencloseBtn{
+  background-color: red;
+
+}
+#youtubeOpencloseBtn p:first-child{
+  background-color: red;
+  width: 80%;
+  padding: 5px;
+}
+#youtubeOpencloseBtn p:last-child{
+  background-color: red;
+  width: 19%;
+  padding: 5px;
+}
+
+
+#namuwitki{
+  background-color: rgb(97, 97, 97);
+
+}
+#namuOpencloseBtn{
+  margin-bottom: 25px;
+  background-color: rgb(51, 51, 51);
+
+}
+#namuOpencloseBtn p:first-child{
+  background-color: rgb(51, 51, 51);
+  width: 80%;
+  padding: 5px;
+}
+#namuOpencloseBtn p:last-child{
+  background-color: rgb(51, 51, 51);
+  width: 19%;
+  padding: 5px;
+}
+
+
+#Sagin{
+  background-color: rgb(214, 214, 214);
+
+}
+#photoOpencloseBtn{
+  background-color: rgb(99, 87, 87);
+
+}
+#photoOpencloseBtn p:first-child{
+  background-color: rgb(99, 87, 87);
+  width: 80%;
+  padding: 5px;
+
+}
+#photoOpencloseBtn p:last-child{
+  background-color: rgb(99, 87, 87);
+  width: 19%;
+  padding: 5px;
+}
+.t_next{
+  margin-top: 5px;
+  background-color: rgb(255, 255, 255);
+  padding: 2px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  box-shadow:0 1px 2px rgba(0,0,0,0.3),
+  0 1px 3px rgba(0,0,0,0.15);
+}
+.y_next{
+  display: inline-block;
+  margin-top: 5px;
+  width: 800px;
+  background-color: rgb(230, 37, 37);
+  padding: 2px;
+  color: rgb(253, 253, 253);
+  text-align: center;
+  box-shadow:0 1px 2px rgba(0,0,0,0.3),
+  0 1px 3px rgba(0,0,0,0.15);
+}
+.y2_next{
+  display: inline-block;
+
+  width: 55px;
+  background-color: rgb(230, 37, 37);
+  padding: 2px;
+  color: rgb(253, 253, 253);
+  text-align: center;
+  box-shadow:0 1px 2px rgba(0,0,0,0.3),
+  0 1px 3px rgba(0,0,0,0.15);
+}
+.youtubeView_d{
+  margin-top: 20px;
+  
+}.youtubeView_d > iframe{
+  box-shadow:0 1px 2px rgba(0,0,0,0.3),
+  0 1px 3px rgba(0,0,0,0.15);
+  
+}
+
+
+
+
+
+
+/*각 항목 디자인 만들기 끝*/
+
+
+
+
+
+
+
+
+
+
+
+* {
+    font-family: "Gowun Dodum", serif;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+}
+
+/*  left section */
+#box1 {
+    float: left;
+    width: 85%;
+    color: rgb(10, 10, 10);
+    background-color: rgb(250, 246, 246);
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+}
+
+.input-group {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+/*  right section */
+#box2 {
+    float: right;
+    width: 15%;
+    background-color: #ffffff;
+    color: black;
+    font-size: 20px;
+    top: 448px;
+    right: 0;
+    text-align: center;
+    display: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* 새로운 취미명 입력 + 링크추가 입력 modal창 */
+.modal-content {
+    width: 500px;
+    margin: 0 auto 20px auto;
+    color: black;
+
+    /* border: 3px solid rgb(116, 15, 15); */
+    background-color: rgb(195, 240, 255);
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+/* category table */
+.table>button {
+    width: 100%;
+    margin-top: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.fs-4{
+  transform: scale(2) translateX(20%) translateY(20%);
+}
+#logout{
+  display: block;
+  padding: 5px;
+  border-radius: 8%;
+  border : 4px solid var(--web_b_color) ;
+  color: white;
+  background-color: var(--web_bd1_color);
+  transform: translateX(-20%) translateY(15%);
+  cursor:pointer;
+}
+#logout:hover{
+  background-color: #0f6aa7;
+}
+.T_menu{
+  /*background-color: var(--web_bd1_color);*/
+}
+#category > button{
+  color: black;
+  background-color: var(--web_b_color);
+}
+.container{
+  background-color: white;
+}
+.fixed_but{
+  display: inline-block;
+  background-color: var(--web_b_color);
+  color: black;
+  transform: translateX(40px);
+  width: 80%;
+  font-size: .9rem;
+  margin-top: 3px;
+  border: 1px solid black;
+  border-radius: 3px 0px 0px 3px;
+}
